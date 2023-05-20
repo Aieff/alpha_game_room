@@ -21,20 +21,19 @@ toastr.options = {
 
 function cadastrarUser() {
 
-    // Recebe os dados vindos do formulario
     var dados = {
         acao: "cadastrarUsuario",
-        nome: $("#inputFormName").val(),
-        sobrenome: $("#inputFormLastName").val(),
-        email: $("#inputFormEmail").val(),
-        nascimento: $("#inputFormBirthday").val(),
-        password: $("#inputFormPassword").val(),
-        confirmPassword: $("#inputFormCPassword").val(),
+        nome: $("#nome").val(),
+        sobrenome: $("#sobrenome").val(),
+        email: $("#email").val(),
+        nascimento: $("#nascimento").val(),
+        senha: $("#senha").val(),
+        confirmSenha: $("#csenha").val(),
         genero: $("input[name='gender']:checked").val()
     };
 
     if (dados.nome != '' || dados.sobrenome != '' || dados.email != '' ||
-        dados.nascimento != '' || dados.password != '' || dados.confirmPassword != ''|| dados.genero != '') {
+        dados.nascimento != '' || dados.senha != '' || dados.confirmSenha != ''|| dados.genero != '') {
 
     $.ajax({
         method: "POST",
@@ -51,12 +50,12 @@ function cadastrarUser() {
             },
             error: function (data) {
             //Exibe alerta error
-            toastr["warning"]("Ocorreu um erro!");
+            toastr["error"]("Ocorreu um erro!");
             }
 
         });
     } else {
         //Exibe alerta campos obrigatórios
-        toastr["warning"]("Preencha os campos Obrigatórios!");
+        toastr["info"]("Preencha os campos Obrigatórios!");
     }
 }
