@@ -1,22 +1,22 @@
-$(document).ready(function () {
-    toastr.options = {
-        "closeButton": false,
-        "debug": false,
-        "newestOnTop": false,
-        "progressBar": false,
-        "positionClass": "toast-top-right",
-        "preventDuplicates": false,
-        "onclick": null,
-        "showDuration": "300",
-        "hideDuration": "1000",
-        "timeOut": "5000",
-        "extendedTimeOut": "1000",
-        "showEasing": "swing",
-        "hideEasing": "linear",
-        "showMethod": "fadeIn",
-        "hideMethod": "fadeOut"
-    }
-});
+// Toast Config
+
+toastr.options = {
+    "closeButton": false,
+    "debug": false,
+    "newestOnTop": false,
+    "progressBar": false,
+    "positionClass": "toast-top-right",
+    "preventDuplicates": false,
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "1000",
+    "timeOut": "5000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+}
 
 
 function cadastrarUser() {
@@ -51,12 +51,12 @@ function cadastrarUser() {
             },
             error: function (data) {
             //Exibe alerta error
-            toastr["warning"](`Ocorreu um erro!`);
+            toastr["warning"]("Ocorreu um erro!");
             }
 
         });
     } else {
         //Exibe alerta campos obrigatórios
-        toastr["warning"](`Preencha os campos Obrigatórios!`);
+        toastr["warning"]("Preencha os campos Obrigatórios!");
     }
 }
