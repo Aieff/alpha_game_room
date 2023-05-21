@@ -1,4 +1,16 @@
+function resetInputsForms(){
+    $("#nome").val("");
+    $("#sobrenome").val("");
+    $("#email").val("");
+    $("#nascimento").val("");
+    $("#senha").val("");
+    $('input[name=gender]').prop('checked',false);
+    $("#csenha").val("");
+}
+
 function cadastrarUser() {
+
+    const inicio = new Date().toLocaleString();
 
     var dados = {
         acao: "cadastrarUsuario",
@@ -7,35 +19,53 @@ function cadastrarUser() {
         email: $("#email").val(),
         nascimento: $("#nascimento").val(),
         senha: $("#senha").val(),
-        genero: $("input[name='gender']:checked").val()
+        genero: $("input[name='gender']:checked").val(),
+        inicio: inicio
     };
 
-    console.log(dados);
+    // Valida o meu E-mail
 
-    if (dados.nome != '' || dados.sobrenome != '' || dados.email != '' ||
-        dados.nascimento != '' || dados.senha != '' || dados.confirmSenha != ''|| dados.genero != '') {
+    const emailValue = email.value?.trim();
+    let csenha = $("#csenha").val()
 
-    $.ajax({
-        method: "POST",
-        url: "../ajax/usuarios.php",
-        dataType: 'json',
-        data: dados,
-        success: function(data) {
-            console.log(data)
-            if (data['error']) {
-                //alert(data['error'])
-                } else {
-                    //alert(data['error'])
-                }
-            },
-            error: function (data) {
-            //Exibe alerta error
-            toastr["error"]("Ocorreu um erro!");
-            }
+    function isEmail(email) {
+        return /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(
+          email
+        );
+      }
 
-        });
-    } else {
-        //Exibe alerta campos obrigatórios
-        toastr["info"]("Preencha os campos Obrigatórios!");
+    if (!isEmail(emailValue)) {
+        toastr["info"]("E-mail inválido");
+        return false
+      }
+
+    // Valida se minhas senhas são iguais
+    else if (dados.senha != csenha) {
+        toastr["info"]("Senhas não Coincidem!");
     }
-}
+
+      // Valida meus campos e envia meus dados por um Json para meu ajax.php
+
+    else if (dados.nome != '' || dados.sobrenome != '' || dados.email != '' ||
+        dados.nascimento != '' || dados.senha != '' || dados.confirmSenha != '') {
+
+            $.ajax({
+                method: "POST",
+                url: "../ajax/usuarios.php",
+                dataType: 'json',
+                data: dados,
+                success: function(data) {
+                    console.log(data)
+                    if (data['error']) {
+                        // alert(data['error'])
+                        } else {
+                            //alert(data['error'])
+                        }
+                        resetInputsForms();
+                    },
+                    error: function (data) {
+                    toastr["info"]("Preencha os campos Obrigatórios!");
+                    }
+                });
+            }
+        }

@@ -1,5 +1,5 @@
 <?php
-include "../configuracao.php";
+include "../configuracoes.php";
 
 $dados = $_POST;
 
@@ -13,10 +13,11 @@ if ($acao == "cadastrarUsuario") {
     $nascimento = $dados['nascimento'];
     $senha = md5($dados['senha']);
     $genero = $dados['genero'];
+    $inicio = $dados['inicio'];
 
     if($nome != '' && $sobrenome != '' && $email != '' && $nascimento != '' && $senha != '' && $genero != '') {
 
-    $sql = "INSERT INTO usuarios (nome, sobrenome, email, nascimento, senha, genero) VALUES ('$nome', '$sobrenome', '$email', '$nascimento', '$senha', '$genero')";
+    $sql = "INSERT INTO usuarios (nome, sobrenome, email, nascimento, senha, genero, inicio) VALUES ('$nome', '$sobrenome', '$email', '$nascimento', '$senha', '$genero', '$inicio')";
     $resultado = mysqli_query($conexao, $sql);
 
     if ($resultado) {
@@ -24,7 +25,7 @@ if ($acao == "cadastrarUsuario") {
         $response['msg'] = "Cadastrado com sucesso!";
     } else {
         $response['error'] = true;
-        $response['msg'] = "Não foi possível cadastrar o Game!";
+        $response['msg'] = "Não foi possível cadastrar o Usuario!";
         echo mysqli_error($conexao);
     }
 
