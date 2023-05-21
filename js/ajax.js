@@ -10,6 +10,8 @@ function cadastrarUser() {
         genero: $("input[name='gender']:checked").val()
     };
 
+    console.log(dados);
+
     if (dados.nome != '' || dados.sobrenome != '' || dados.email != '' ||
         dados.nascimento != '' || dados.senha != '' || dados.confirmSenha != ''|| dados.genero != '') {
 
