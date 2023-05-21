@@ -1,7 +1,7 @@
-// Mask de inputs
-
 $(document).ready(function(){
-    $('[name=inputFormBirthday]').mask('00/00/0000');
+
+    $('.date-mask').mask('00/00/0000');
+
 });
 
 // Toast Config
@@ -23,3 +23,4 @@ toastr.options = {
     "showMethod": "fadeIn",
     "hideMethod": "fadeOut"
 }
+

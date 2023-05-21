@@ -37,7 +37,7 @@ include_once "configuracoes.php";
 
                     <div class="input-box">
                         <label for="inputFormBirthday">Data de Nascimento</label>
-                        <input id="nascimento" type="text" name="inputFormBirthday" placeholder="dd/mm/yyyy">
+                        <input id="nascimento" type="text" class="date-mask" name="inputFormBirthday" placeholder="dd/mm/yyyy">
                     </div>
 
                     <div class="input-box">
