@@ -13,6 +13,7 @@ include_once "configuracoes.php";
             <form>
                 <div class="form-header">
                     <div class="title">
+                    <img src="image/logo.png">
                         <h1>ARE YOU READY <span>?</span></h1>
                     </div>
                     <div class="login-button">

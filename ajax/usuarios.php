@@ -15,7 +15,7 @@ if ($acao == "cadastrarUsuario") {
     $genero = $dados['genero'];
     $inicio = $dados['inicio'];
 
-    if($nome != '' && $sobrenome != '' && $email != '' && $nascimento != '' && $senha != '' && $genero != '') {
+    if ($nome != '' && $sobrenome != '' && $email != '' && $nascimento != '' && $senha != '' && $genero != '') {
 
     $sql = "INSERT INTO usuarios (nome, sobrenome, email, nascimento, senha, genero, inicio) VALUES ('$nome', '$sobrenome', '$email', '$nascimento', '$senha', '$genero', '$inicio')";
     $resultado = mysqli_query($conexao, $sql);
@@ -32,3 +32,4 @@ if ($acao == "cadastrarUsuario") {
     echo json_encode($response);
     }
 }
+

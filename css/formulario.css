@@ -55,6 +55,10 @@ body {
     color: var(---primary-color);
 }
 
+.title img {
+    margin-bottom: 1rem;
+}
+
 .form {
     transition: 0.4s;
     width: 50%;
