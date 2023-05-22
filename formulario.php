@@ -89,7 +89,7 @@ include_once "configuracoes.php";
 
 </div>
 
-    <script type="text/javascript" src="js/ajax.js"></script>
+    <script type="text/javascript" src="js/funcoes.js"></script>
     <?php include_once "layout/footer.js" ?>
 </body>
 </html>
