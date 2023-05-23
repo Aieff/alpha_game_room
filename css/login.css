@@ -120,6 +120,7 @@ body {
 }
 
 .input-group {
+    flex-direction: column;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -186,7 +187,7 @@ body {
 .continue-button button {
     transition: 0.3s;
     width: 100%;
-    margin-top: 2.5rem;
+    margin-bottom: 2rem;
     border: none;
     background-color: var(---primary-color);
     padding: 0.62rem;
@@ -219,6 +220,7 @@ body {
         transition: 0.4s;
         width: 100%;
         border-radius: 5%;
+        height: 750px;
     }
 }
 
@@ -229,19 +231,20 @@ body {
     }
 }
 
-@media screen and (max-width: 1064px) {
+@media screen and (max-width: 956px) {
     .container {
         transition: 0.4s;
         width: 90%;
         height: auto;
     }
+    .enter  {
+        margin-top: 3.5rem;
+    }
     .input-group {
         transition: 0.4s;
         flex-direction: column;
         z-index: 5;
-        padding-right: 5rem;
         max-height: 10rem;
-        overflow-y: scroll;
         flex-wrap: nowrap;
     }
     .gender-inputs {
@@ -262,8 +265,5 @@ body {
     }
     .form-header h1 {
         font-size: 18px;
-    }
-    .input-box input {
-        margin: 0.6rem 10px;
     }
 }

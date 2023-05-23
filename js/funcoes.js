@@ -1,3 +1,10 @@
+// Function save Users
+
+function inciarLogin() {
+    document.querySelector('#form').classList.add("disabled");
+}
+
+// Reseta os meus campos e exibe um Toast de sucesso
 function resetInputsForms(){
     $("#nome").val("");
     $("#sobrenome").val("");
@@ -6,10 +13,13 @@ function resetInputsForms(){
     $("#senha").val("");
     $('input[name=gender]').prop('checked',false);
     $("#csenha").val("");
+
+    toastr["success"]("Cadastrado com sucesso!");
 }
 
 function cadastrarUser() {
 
+    // Armazena a data e hora atual do cadastro
     const inicio = new Date().toLocaleString();
 
     var dados = {
@@ -69,3 +79,39 @@ function cadastrarUser() {
                 });
             }
         }
+
+
+// Function Login
+
+function inciarSessao() {
+    var dados = {
+        acao: "inciaSessao",
+        email: $("#email").val(),
+        senha: $("#senha").val()
+    };
+         console.log(dados);
+             // Valida meus campos e envia meus dados por um Json para meu ajax.php
+         
+            if (dados.email != '' || dados.senha != '') {
+         
+                   $.ajax({
+                       method: "POST",
+                       url: "../include/acesso.php",
+                       dataType: 'json',
+                       data: dados,
+                       success: function(data) {
+                           console.log(data)
+                           if (data['error']) {
+                               // alert(data['error'])
+                               } else {
+                                   //alert(data['error'])
+                               }
+                           },
+                           error: function (data) {
+                            toastr["error"]("Ocorreu um erro.");
+                           }
+                       });
+                   } else {
+                    toastr["info"]("Não foi possível efetuar login!");
+                   }
+               }

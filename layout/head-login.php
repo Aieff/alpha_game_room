@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon">
     <title>Alpha</title>
 
-    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="css/login.css">
     <script src="js/libs/jquery-3.6.4.min.js"></script>
     <script src="js/libs/jquery-mask.js"></script>
     

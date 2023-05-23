@@ -17,11 +17,11 @@ include_once "configuracoes.php";
                         <h1>ARE YOU READY <span>?</span></h1>
                     </div>
                     <div class="login-button">
-                        <button><a href="#">Entrar</a></button>
+                        <button><a href="login.php">Entrar</a></button>
                     </div>
                 </div>
 
-                <div class="input-group">
+                <div class="input-group" id="form"> 
                     <div class="input-box">
                         <label for="inputFormName">Nome</label>
                         <input id="nome" type="text" name="inputFormName" placeholder="Digite seu nome">
@@ -90,6 +90,5 @@ include_once "configuracoes.php";
 </div>
 
     <script type="text/javascript" src="js/funcoes.js"></script>
-    <?php include_once "layout/footer.js" ?>
 </body>
 </html>
