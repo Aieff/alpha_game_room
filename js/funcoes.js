@@ -1,5 +1,4 @@
 // Function save Users
-
 function inciarLogin() {
     document.querySelector('#form').classList.add("disabled");
 }
@@ -29,7 +28,6 @@ function cadastrarUser() {
         email: $("#email").val(),
         nascimento: $("#nascimento").val(),
         senha: $("#senha").val(),
-        genero: $("input[name='gender']:checked").val(),
         inicio: inicio
     };
 
@@ -80,38 +78,3 @@ function cadastrarUser() {
             }
         }
 
-
-// Function Login
-
-function inciarSessao() {
-    var dados = {
-        acao: "inciaSessao",
-        email: $("#email").val(),
-        senha: $("#senha").val()
-    };
-         console.log(dados);
-             // Valida meus campos e envia meus dados por um Json para meu ajax.php
-         
-            if (dados.email != '' || dados.senha != '') {
-         
-                   $.ajax({
-                       method: "POST",
-                       url: "../include/acesso.php",
-                       dataType: 'json',
-                       data: dados,
-                       success: function(data) {
-                           console.log(data)
-                           if (data['error']) {
-                               // alert(data['error'])
-                               } else {
-                                   //alert(data['error'])
-                               }
-                           },
-                           error: function (data) {
-                            toastr["error"]("Ocorreu um erro.");
-                           }
-                       });
-                   } else {
-                    toastr["info"]("Não foi possível efetuar login!");
-                   }
-               }

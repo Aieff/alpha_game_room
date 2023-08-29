@@ -1,6 +1,6 @@
-<?php 
-include_once "layout/head.php";
+<?php
 include_once "configuracoes.php";
+include_once "layout/head.php";
 ?>
 
 <body>
@@ -51,34 +51,6 @@ include_once "configuracoes.php";
                         <input id="csenha" type="password" name="inputFormCPassword" placeholder="Redigite sua senha">
                     </div>
 
-                </div>
-
-                <div class="gender-inputs">
-                    <div class="gender-title">
-                        <h6>Gênero</h6>
-                    </div>
-
-                    <div class="gender-group">
-                        <div class="gender-input">
-                            <input id="female" type="radio" name="gender" value="1">
-                            <label for="inputRadioFemale">Feminino</label>
-                        </div>
-
-                        <div class="gender-input">
-                            <input id="male" type="radio" name="gender" value="2">
-                            <label for="inputRadioMale">Masculino</label>
-                        </div>
-
-                        <div class="gender-input">
-                            <input id="others" type="radio" name="gender" value="3">
-                            <label for="inputRadioOthers">Outros</label>
-                        </div>
-
-                        <div class="gender-input">
-                            <input id="none" type="radio" name="gender" value="4">
-                            <label for="inputRadioNone">Prefiro não dizer</label>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="continue-button">

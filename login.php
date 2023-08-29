@@ -1,6 +1,6 @@
-<?php 
-include_once "layout/head-login.php";
+<?php
 include_once "configuracoes.php";
+include_once "layout/head-login.php";
 ?>
 
 <body>

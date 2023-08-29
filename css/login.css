@@ -267,3 +267,10 @@ body {
         font-size: 18px;
     }
 }
+
+.error-404 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
