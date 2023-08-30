@@ -1,6 +1,8 @@
 <?php
 include_once "configuracoes.php";
 include_once "layout/head.php";
+include_once "layout/imports/imp-formulario.php";
+include_once "layout/close-head.php";
 ?>
 
 <body>

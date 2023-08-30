@@ -1,5 +1,7 @@
 <?php
-include_once "layout/default.php";
+include_once "layout/head.php";
+include_once "layout/imports/imp-error.php";
+include_once "layout/close-head.php";
 ?>
 
 <body>

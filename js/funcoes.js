@@ -1,8 +1,4 @@
 // Function save Users
-function inciarLogin() {
-    document.querySelector('#form').classList.add("disabled");
-}
-
 // Reseta os meus campos e exibe um Toast de sucesso
 function resetInputsForms(){
     $("#nome").val("");
