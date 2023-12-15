@@ -28,7 +28,7 @@ body {
     background: #191E29;
 }
 
-.container {
+.container-default {
     width: 80%;
     height: 80vh;
     display: flex;
@@ -212,7 +212,7 @@ body {
     .form-image {
         display: none;
     }
-    .container {
+    .container-default {
         transition: 0.4s;
         width: 50%;
     }
@@ -232,7 +232,7 @@ body {
 }
 
 @media screen and (max-width: 956px) {
-    .container {
+    .container-default {
         transition: 0.4s;
         width: 90%;
         height: auto;

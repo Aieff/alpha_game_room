@@ -1,16 +1,17 @@
 <?php
-include_once "configuracoes.php";
-include_once "layout/head.php";
-include_once "layout/imports/imp-login.php";
-include_once "layout/close-head.php";
+include_once 'configuracoes.php';
+include_once 'layout/head.php';
+include_once 'layout/imports/links-login.php';
+include_once 'layout/close-head.php';
 ?>
 
-<body>
-    <div class="container">
+
+    <div class="container-default">
 
         <div class="form-image">
             <img src="image/bg-login.png">
         </div>
+
         <div class="form">
             <form action="include/acesso.php" method="post" enctype="multipart/form-data">
                 <div class="form-header">
@@ -39,8 +40,11 @@ include_once "layout/close-head.php";
             </form>
         </div>
 
-</div>
+    </div>
 
-    <script type="text/javascript" src="js/funcoes.js"></script>
-</body>
-</html>
+    
+<script type="text/javascript" src="js/funcoes.js"></script>
+
+<?php
+include_once ('layout/footer.php');
+?>

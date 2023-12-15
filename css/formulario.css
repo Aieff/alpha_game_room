@@ -28,7 +28,7 @@ body {
     background: #191E29;
 }
 
-.container {
+.container-default {
     width: 80%;
     height: 80vh;
     display: flex;
@@ -136,6 +136,7 @@ body {
     color: #fff;
     background: #2E374E;
     margin: 0.6rem 0;
+    width: 18rem;
     padding: 0.8rem 1.2rem;
     border: none;
     border-radius: 10px;
@@ -205,13 +206,65 @@ body {
     color: #fff;
 }
 
+#profileDisplay {
+    display: block;
+    width: 25%;
+    border: 1px solid #2e374e;
+    margin: 10px auto;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.avatar-icons {
+    background: #191e29;
+    border-radius: 50%;
+    transition: .2s;
+    padding: 0.25rem;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .avatar-icons:hover {
+    transition: .2s;
+    border: 2px solid #007bff;
+    box-shadow: 0 5px 20px #007bff91;
+  }
+
+  .button-default {
+    transition: .2s;
+    background-color: var(---primary-color);
+    border: 1px solid var(---primary-color);
+  }
+
+  .button-default:hover {
+    transition: .2s;
+    background-color: var(---primary-color-hover);
+    border: 1px solid var(---primary-color-hover);
+  }
+
+  .primary-bg {
+    background-color: var(---background-color);
+    border: none;
+    color: #cecece;
+    text-transform: uppercase;
+  }
+
+  .secundary-bg {
+    background-color: var(---content-image-color);
+  }
+
+  .align-itens {
+    display: flex;
+    justify-content: center;
+  }
+
 /* Media Query */
 
 @media screen and (max-width: 1330px) {
     .form-image {
         display: none;
     }
-    .container {
+    .container-default {
         transition: 0.4s;
         width: 50%;
     }
@@ -230,7 +283,7 @@ body {
 }
 
 @media screen and (max-width: 1064px) {
-    .container {
+    .container-default {
         transition: 0.4s;
         width: 90%;
         height: auto;
